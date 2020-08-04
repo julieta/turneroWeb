@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Turnos</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>NUMERO DEL TURNO</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO </th>
+                        <th>CATEGORIA</th>
+                        <th>FECHA</th>
+                        <th>HORA</th>
+                        <th>DESCRIPCION</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let turno of turnos" class="text-center">
+                        <td>{{turno.id}}</td>
+                        <td>{{turno.nombrecliente}}</td>
+                        <td>{{turno.apellidocliente}}</td>
+                        <td>{{turno.categoria?.nombre}}</td>
+                        <td>{{turno.fecha}}</td>
+                        <td>{{turno.hora}}</td>
+                        <td>{{turno.descripcion}}</td>
+                        <td>
+                           <button class="btn btn-warning">Editar</button> 
+                           <button class="btn btn-danger">Delete</button> 
+                        </td>
+
