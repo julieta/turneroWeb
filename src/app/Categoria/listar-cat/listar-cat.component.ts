@@ -19,4 +19,8 @@ export class ListarCatComponent implements OnInit {
     })
   }
 
+  Nueva(){
+    this.router.navigate(["add-cat"]);
+  }
+
 }

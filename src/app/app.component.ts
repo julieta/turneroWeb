@@ -3,8 +3,6 @@ import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,9 +16,7 @@ constructor(private router:Router){}
 Listar(){
   this.router.navigate(["listar"]);
 }
-Nuevo(){
-  this.router.navigate(["add"]);
-}
+
 
 Listarcat(){
   this.router.navigate(["listar-cat"]);
