@@ -17,10 +17,11 @@ export class ListarTurComponent implements OnInit {
     this.servicetur.getTurnos().subscribe(data=>{
       this.turnos=data;
     
-    }
+    });
+  }
 
-    )
-
+  Listartur(){
+    this.router.navigate(["listar-tur"]);
   }
 
 }

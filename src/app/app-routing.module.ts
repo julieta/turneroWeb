@@ -15,6 +15,7 @@ const routes: Routes = [
  {path: 'add-cat', component:AddCatComponent},
  {path : 'listar-tur', component:ListarTurComponent},
  {path: 'add-tur', component:AddturComponent},
+ {path : '**',  pathMatch: 'full', redirectTo : ''}
 ];
 
 @NgModule({

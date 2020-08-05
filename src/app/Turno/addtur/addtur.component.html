@@ -1,1 +1,29 @@
-<p>addtur works!</p>
+<form>
+    <fieldset>
+      <legend>Nuevo Turno</legend>
+      <hr>
+      <div>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input class="form-control" type="text"  name="nombre" placeholder="Nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Apellido</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Fecha</label>
+            <input type="datetime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Categoria</label>
+            <select class="form-control" name="categoria">
+              <!--option *ngFor="let c of categoria" [ngValue]="c">{{c.name}}</option-->
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+    </fieldset>
+  </form>

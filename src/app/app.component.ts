@@ -17,12 +17,5 @@ Listar(){
   this.router.navigate(["listar"]);
 }
 
-
-Listarcat(){
-  this.router.navigate(["listar-cat"]);
-}
-Listartur(){
-  this.router.navigate(["listar-tur"]);
-}
  
 }

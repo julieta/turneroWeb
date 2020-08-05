@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Categoria} from '../Modelo/Categoria';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(//{
+ // providedIn: 'root'
+//}
+)
 export class ServicecatService {
 
   constructor(private http:HttpClient) { }

@@ -14,6 +14,7 @@ import { ServicecatService} from './Service/servicecat.service';
 import { ListarTurComponent } from './Turno/listar-tur/listar-tur.component';
 import { AddturComponent } from './Turno/addtur/addtur.component';
 import { ServiceturService } from './Service/servicetur.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -22,20 +23,12 @@ import { ServiceturService } from './Service/servicetur.service';
   declarations: [
     AppComponent,
     ListarComponent,
-   
     AddComponent,
-   
     ListarCatComponent,
-   
     AddCatComponent,
-   
     ListarTurComponent,
-   
     AddturComponent,
-   
-   
-    
-  
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

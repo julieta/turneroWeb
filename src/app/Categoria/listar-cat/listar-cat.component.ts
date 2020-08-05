@@ -23,4 +23,9 @@ export class ListarCatComponent implements OnInit {
     this.router.navigate(["add-cat"]);
   }
 
+    
+  Listarcat(){
+    this.router.navigate(["listar-cat"]);
+  }
+
 }
