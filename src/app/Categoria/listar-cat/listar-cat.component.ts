@@ -28,4 +28,9 @@ export class ListarCatComponent implements OnInit {
     this.router.navigate(["listar-cat"]);
   }
 
+
+  EditarCat(categoria : Categoria): void {
+    localStorage.setItem("id", categoria.id.toString());
+    this.router.navigate(["editar-cat"]);
+  }
 }

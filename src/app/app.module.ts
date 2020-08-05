@@ -15,6 +15,7 @@ import { ListarTurComponent } from './Turno/listar-tur/listar-tur.component';
 import { AddturComponent } from './Turno/addtur/addtur.component';
 import { ServiceturService } from './Service/servicetur.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component';
 
 
 
@@ -29,6 +30,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ListarTurComponent,
     AddturComponent,
     NavbarComponent,
+    EditarCatComponent,
   ],
   imports: [
     BrowserModule,
