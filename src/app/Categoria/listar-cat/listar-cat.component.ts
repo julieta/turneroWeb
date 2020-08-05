@@ -16,7 +16,7 @@ export class ListarCatComponent implements OnInit {
   ngOnInit() {
     this.servicecat.getCategorias().subscribe(data=>{
       this.categorias=data;
-    })
+    });
   }
 
   Nueva(){

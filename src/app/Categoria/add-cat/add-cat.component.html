@@ -3,21 +3,35 @@
       <legend>Nueva Categoria</legend>
       <hr>
       <div>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Nombre</label>
-            <input class="form-control" type="text"  name="nombre" placeholder="Nombre" required>
+        <form autocomplete="off" (ngSubmit)="GuardarCat(formularioCat)" #formularioCat="ngForm">
+          <div class="form-group row">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" 
+                    ngModel 
+                    name="nombre" 
+                    type="text" 
+                    placeholder="Nombre" 
+                    required >
           </div>
           <div class="form-group">
-              <label for="exampleFormControlTextarea1">Descripción</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <label class="form-label">Descripción</label>
+              <textarea class="form-control" 
+                        rows="3" 
+                        ngModel 
+                        name="descripcion" 
+                        type="text" 
+                        placeholder="Descripcion" 
+                        required
+                        >
+        
+              </textarea>
           </div>
-          
           <br>
+          <div>
+            <button type="submit"  class="btn btn-outline-info btn-lg btn-block">Guardar</button>
+          </div>
         </form>
-        <div>
-          <button type="button" class="btn btn-outline-info btn-lg btn-block">Guardar</button>
-        </div>
+        
       </div>
     </fieldset>
   </form>
