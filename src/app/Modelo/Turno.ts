@@ -7,6 +7,6 @@ export class Turno{
     apellidocliente: String;
     categoria : Number;
     fecha : Date;
-    hora : Time;
+    hora : String;
     descripcion: String;
 }
