@@ -30,7 +30,7 @@ import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component'
     ListarTurComponent,
     AddturComponent,
     NavbarComponent,
-    EditarCatComponent,
+    EditarCatComponent
   ],
   imports: [
     BrowserModule,
