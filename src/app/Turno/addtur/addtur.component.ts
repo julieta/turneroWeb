@@ -15,7 +15,7 @@ export class AddturComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //GuardarTur(formularioTur){
- //   this.servicetur.guardarTurno(formularioTur.value).subscribe(respuesta =>{console.log(respuesta)});
- // }
+  GuardarTur(formulario){
+    this.servicetur.guardarTurno(formulario.value).subscribe(respuesta =>{console.log(respuesta)});
+  }
 }

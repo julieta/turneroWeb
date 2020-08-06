@@ -1,54 +1,68 @@
-<!--form>
-    <fieldset>
-      <legend>Nuevo Turno</legend>
-      <hr>
-      <div>
-        <form>
-          <div autocomplete="off" (ngSubmit)="GuardarTur(formularioTur)" #formularioTur="ngForm">
-            <label class="form-label">Nombre</label>
-            <input class="form-control" 
-                    ngModel 
-                    name="nombre" 
-                    type="text" 
-                    placeholder="Nombre" 
-                    required >
-          </div>
-          <div class="form-group">
-            <label class="form-label">Apellido</label>
-            <input class="form-control" 
-                    ngModel 
-                    name="apellido" 
-                    type="text" 
-                    placeholder="Apellido" 
-                    required >
-          </div>
-          <div class="form-group">
-            <label class="form-label">Fecha</label>
-            <input class="form-control" 
-            ngModel 
-            name="fecha" 
-            type="text" 
-            placeholder="Fecha" 
-            required >
-          </div>
-          <div class="form-group">
-            <label class="form-label">Categoria</label>
-            <select class="form-control" name="categoria"-->
-              <!--option *ngFor="let c of categoria" [ngValue]="c">{{c.name}}</option-->
-            <!--/select>
-            <input class="form-control" 
-            ngModel 
-            name="prueba" 
-            type="text" 
-            placeholder="Para borrar" 
-            required>
-          </div>
-          <br>
-          <div>
-            <button type="submit" class="btn btn-outline-info btn-lg btn-block">Guardar</button>
-          </div>
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12">
+      <form>
+          <fieldset>
+            <legend>Nuevo Turno</legend>
+            <hr>
+            <div>
+              <form autocomplete="off" (ngSubmit)="GuardarTur(formularioTur)" #formularioTur="ngForm">
+                <div>
+                  <label class="form-label col-sm-12">Nombre</label>
+                  <input class="form-control" 
+                          ngModel 
+                          name="nombre" 
+                          type="text" 
+                          placeholder="Nombre" 
+                          required >
+                </div>
+                <div class="form-group row col-sm-12">
+                  <label class="form-label">Apellido</label>
+                  <input class="form-control" 
+                          ngModel 
+                          name="apellido" 
+                          type="text" 
+                          placeholder="Apellido" 
+                          required >
+                </div>
+                <!--div class="form-group row col-sm-12">
+                  <label class="form-label">Categoria</label>
+                  <input class="form-control" 
+                          ngModel 
+                          name="categoria" 
+                          type="text" 
+                          placeholder="Categoria" 
+                          required >
+                </div-->
+                <!--div class="form-group row col-sm-12">
+                  <label class="form-label">Fecha</label>
+                  <input class="form-control" 
+                          ngModel 
+                          name="fecha" 
+                          type="text" 
+                          placeholder="fecha" 
+                          required >
+                </div-->
+                <div class="form-group col-sm-12">
+                  <label class="form-label">Descripción</label>
+                  <textarea class="form-control" 
+                            rows="3" 
+                            ngModel 
+                            name="descripcion" 
+                            type="text" 
+                            placeholder="Descripcion" 
+                            required
+                            >      
+                  </textarea>
+              </div>
+                <br>
+                <div>
+                  <button type="submit" class="btn btn-outline-info btn-lg btn-block">Guardar turno</button>
+                </div>
+              </form>
+            </div>
+          </fieldset>
         </form>
       </div>
-    </fieldset>
-  </form-->
-<h1>hola</h1>
+  </div>
+</div>

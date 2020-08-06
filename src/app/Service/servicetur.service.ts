@@ -16,8 +16,8 @@ export class ServiceturService {
       return this.http.get<Turno[]>(this.Url);
     }
 
- //   guardarTurno(turno : any) : Observable<any> {
- //     return this.http.post(this.Url, turno);
-  //  }
+    guardarTurno(turno : any) : Observable<any> {
+      return this.http.post(this.Url, turno);
+    }
 
 }
