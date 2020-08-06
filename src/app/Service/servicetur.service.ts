@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Turno} from '../Modelo/Turno';
 import { Observable } from 'rxjs';
 import { identifierModuleUrl } from '@angular/compiler';
+import { Categoria } from '../Modelo/Categoria';
 
 @Injectable(//{
   //providedIn: 'root'}
@@ -19,5 +20,6 @@ export class ServiceturService {
     guardarTurno(turno : any) : Observable<any> {
       return this.http.post(this.Url, turno);
     }
-
+    
+    
 }

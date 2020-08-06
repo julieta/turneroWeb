@@ -9,7 +9,6 @@ import { identifierModuleUrl } from '@angular/compiler';
 //}
 )
 export class ServicecatService {
-
   constructor(private http:HttpClient) { }
     Url='http://localhost:8080/categorias';
 
@@ -21,6 +20,10 @@ export class ServicecatService {
       return this.http.post(this.Url, categoria);
     }
 
+    get() : Observable<any>{
+      return this.http.get<Categoria[]>(this.Url);
+    }
+    
   //  getCategoriaId(id : number){
   //    return this.http.get<Categoria>(this.Url + "/" + id);  
   //  }
