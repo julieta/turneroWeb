@@ -15,10 +15,10 @@ export class EditarCatComponent implements OnInit {
   constructor(private servicecat:ServicecatService, private router:Router) { }
 
   ngOnInit(): void {
-    this.EditarCat();
+  //  this.EditarCat();
   }
 
-  EditarCat(){
+ /** EditarCat(){
     let id = localStorage.getItem("id");
     this.servicecat.getCategoriaId(+id).subscribe(data => {
       this.categoria = data;
@@ -31,5 +31,5 @@ export class EditarCatComponent implements OnInit {
       alert("Se actualizo con exito");
       this.router.navigate(["listar-cat"]);
     });
-  }
+  }*/
 }

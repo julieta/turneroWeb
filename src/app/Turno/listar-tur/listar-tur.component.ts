@@ -24,4 +24,8 @@ export class ListarTurComponent implements OnInit {
     this.router.navigate(["listar-tur"]);
   }
 
+  NuevoTur(){
+    this.router.navigate(["addtur"]);
+  }
+
 }

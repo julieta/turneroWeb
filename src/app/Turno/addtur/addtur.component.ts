@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {Turno} from 'src/app/Modelo/Turno';
+import {ServiceturService} from '../../Service/servicetur.service';
 
 @Component({
   selector: 'app-addtur',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddturComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicetur:ServiceturService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  //GuardarTur(formularioTur){
+ //   this.servicetur.guardarTurno(formularioTur.value).subscribe(respuesta =>{console.log(respuesta)});
+ // }
 }

@@ -15,11 +15,9 @@ export class AddCatComponent implements OnInit {
 }
 
   ngOnInit(): void {
-    
   }
 
   GuardarCat(formulario){
-    
     this.servicecat.guardarCategoria(formulario.value).subscribe(respuesta =>{console.log(respuesta)});
   }
 
