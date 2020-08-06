@@ -23,6 +23,9 @@ export class ServicecatService {
     get() : Observable<any>{
       return this.http.get<Categoria[]>(this.Url);
     }
+    deleteCategoria(categoria : Categoria){ 
+      return this.http.delete<Categoria>(this.Url+"/"+categoria.id); 
+    } 
     
   //  getCategoriaId(id : number){
   //    return this.http.get<Categoria>(this.Url + "/" + id);  

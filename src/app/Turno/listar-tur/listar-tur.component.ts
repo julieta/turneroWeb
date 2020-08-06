@@ -28,4 +28,10 @@ export class ListarTurComponent implements OnInit {
     this.router.navigate(["addtur"]);
   }
 
+  EliminarTur(turno : Turno): void { 
+    this.servicetur.deleteTurno(turno).subscribe(data=>{ 
+      this.turnos=this.turnos.filter(p=>p!==turno); 
+    alert("Turno eliminado"); }); 
+  } 
+
 }

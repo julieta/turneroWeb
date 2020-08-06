@@ -28,6 +28,13 @@ export class ListarCatComponent implements OnInit {
     this.router.navigate(["listar-cat"]);
   }
 
+  EliminarCat(categoria : Categoria): void { 
+    this.servicecat.deleteCategoria(categoria).subscribe(data=>{ 
+      this.categorias=this.categorias.filter(p=>p!==categoria); 
+      alert("Categoria eliminada"); 
+    }); 
+  } 
+  
   /**EditarCat(categoria : Categoria): void {
     localStorage.setItem("id", categoria.id.toString());
     this.router.navigate(["editar-cat"]);

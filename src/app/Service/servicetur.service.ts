@@ -21,5 +21,7 @@ export class ServiceturService {
       return this.http.post(this.Url, turno);
     }
     
-    
+    deleteTurno(turno : Turno){ 
+      return this.http.delete<Turno>(this.Url+"/"+turno.id);
+    } 
 }
