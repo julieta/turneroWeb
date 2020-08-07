@@ -3,11 +3,13 @@
       <div class="col-sm-12">
       <form>
           <fieldset>
-            <legend>Nueva Categoria</legend>
+            <legend>Nueva Categoría</legend>
             <hr>
+            <br>
+            <br>
             <div>
               <form autocomplete="off" (ngSubmit)="GuardarCat(formularioCat)" #formularioCat="ngForm">
-                <div class="form-group row">
+                <div class="form-group">
                   <label class="form-label">Nombre</label>
                   <input class="form-control" 
                           ngModel 
@@ -23,7 +25,7 @@
                               ngModel 
                               name="descripcion" 
                               type="text" 
-                              placeholder="Descripcion" 
+                              placeholder="Descripción" 
                               required
                               >        
                     </textarea>
