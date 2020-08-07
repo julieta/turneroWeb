@@ -25,5 +25,6 @@ export class AddturComponent implements OnInit {
 
   GuardarTur(formulario){
     this.servicetur.guardarTurno(formulario.value).subscribe(respuesta =>{console.log(respuesta)});
+    alert("El turno se guardo con exito"); this.router.navigate(["listar-tur"]);
   }
 }

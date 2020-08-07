@@ -25,11 +25,11 @@ export class ServiceturService {
       return this.http.delete<Turno>(this.Url+"/"+turno.id);
     } 
 
-   /** getFiltrado(txt : String) : Observable<any>{
-      return this.http.get<Turno[]>(this.Url+'turnos?nombre'+txt);
+    getFiltrado(txt : string) : Observable<any>{
+      return this.http.get<Turno[]>(this.Url + '?nombre=' +txt);
     }
 
     getFiltradoPorFecha(txt : Date) : Observable<any>{
-      return this.http.get<Turno[]>(this.Url+'?fecha'+txt);
-    }*/
+      return this.http.get<Turno[]>(this.Url+'?fecha='+txt);
+    }
 }

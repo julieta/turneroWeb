@@ -11,13 +11,14 @@ import { ListarComponent } from 'src/app/Persona/listar/listar.component';
 })
 export class EditarCatComponent implements OnInit {
   //categoria : Categoria = new Categoria();
-  //categoria : Categoria[] = [];
+  //categoria : Categoria[];
  categoria : any = {} ;
  
 
   constructor(private servicecat:ServicecatService, private router:Router, private activate: ActivatedRoute
     ) {
     this.activate.params.subscribe((parametros)=>{
+      
       this.servicecat.getCategoria(parametros['id']).subscribe(respuesta => {
         console.log(respuesta);
         this.categoria = respuesta.data;

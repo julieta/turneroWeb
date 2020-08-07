@@ -12,7 +12,7 @@ import { DatePipe } from '@angular/common';
 export class ListarTurComponent implements OnInit {
 
   turnos:Turno[]; 
-  txtBuscador : String;
+  txtBuscador : string;
   txtFecha : Date;
 
 
@@ -39,7 +39,7 @@ export class ListarTurComponent implements OnInit {
     alert("Turno eliminado"); }); 
   } 
 
- /** Buscar(){
+  Buscar(){
     this.servicetur.getFiltrado(this.txtBuscador).subscribe(respuesta=>{
       this.turnos= respuesta.data;
     
@@ -48,9 +48,9 @@ export class ListarTurComponent implements OnInit {
 
   limpiarFiltros(){
     this.txtBuscador = undefined;
-  }*/
+  }
 
- /** BuscarFecha(){
+  BuscarFecha(){
     //this.formatFecha.transform(this.txtFecha,'dd/MM/yyyy')
     this.servicetur.getFiltradoPorFecha(this.txtFecha).subscribe(respuesta=>{
       this.turnos= respuesta.data;
@@ -60,6 +60,6 @@ export class ListarTurComponent implements OnInit {
 
   limpiarFiltrosFecha(){
     this.txtFecha = undefined;
-  }*/
+  }
 
 }

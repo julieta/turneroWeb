@@ -20,7 +20,7 @@ export class AddCatComponent implements OnInit {
 
   GuardarCat(formulario){
     this.servicecat.guardarCategoria(formulario.value).subscribe(respuesta =>{console.log(respuesta)});
-    
+    alert("La categoria se guardo con exito"); this.router.navigate(["listar-cat"]); 
   }
 
   

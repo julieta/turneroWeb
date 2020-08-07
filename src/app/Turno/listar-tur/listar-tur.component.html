@@ -1,40 +1,33 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-           
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div>
-                                <!--(click)="limpiarFiltrosFecha()"-->
-                                <input type="text" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtBuscador"> 
-                            </div>
-                            <div>
-                                <!--(click)="Buscar()"-->
-                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">buscar</button>
-                            </div>
-                            <div>
-                                <!--(click)="limpiarFiltros()"-->
-                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">limpiar</button>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <input type="text" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtBuscador"> 
                     </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div>
-                                <!--(click)="limpiarFiltrosFecha()"-->
-                                <input type="date" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtFecha"> 
-                            </div>
-                            <div>
-                                <!--(click)="BuscarFecha()"-->
-                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">BuscadorFecha</button>
-                            </div>
-                            <div>
-                                <!--(click)="limpiarFiltrosFecha()"-->
-                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">limpiar</button>
-                            </div>
-                        </div>
+                    <div>
+                        <button type="button" (click)="Buscar()" class="btn btn-outline-info btn-lg btn-block">buscar</button>
                     </div>
-                    
+                    <div>
+                        <button type="button" (click)="limpiarFiltros()" class="btn btn-outline-info btn-lg btn-block">limpiar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <input type="date" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtFecha"> 
+                    </div>
+                    <div>
+                        <button type="button" (click)="BuscarFecha()" class="btn btn-outline-info btn-lg btn-block">BuscadorFecha</button>
+                    </div>
+                    <div>
+                        <button type="button" (click)="limpiarFiltrosFecha()" class="btn btn-outline-info btn-lg btn-block">limpiar</button>
+                    </div>
+                </div>
+            </div>
+            
             <br>
             <div class="card">
                 <div class="card-header">
