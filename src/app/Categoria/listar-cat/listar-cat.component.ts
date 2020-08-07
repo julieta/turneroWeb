@@ -11,12 +11,15 @@ import {ServicecatService} from '../../Service/servicecat.service';
 export class ListarCatComponent implements OnInit {
 
   categorias:Categoria[]; 
+  txtBuscador: '';
+
   constructor(private servicecat:ServicecatService, private router:Router) { }
 
   ngOnInit() {
     this.servicecat.getCategorias().subscribe(data=>{
       this.categorias=data;
     });
+    
   }
 
   Nueva(){
@@ -34,9 +37,23 @@ export class ListarCatComponent implements OnInit {
       alert("Categoria eliminada"); 
     }); 
   } 
-  
-  /**EditarCat(categoria : Categoria): void {
+
+  Ver(id : number){
+    this.router.navigate(['/editar-cat', id]);
+  }
+ /** EditarCat(categoria : Categoria): void {
     localStorage.setItem("id", categoria.id.toString());
     this.router.navigate(["editar-cat"]);
+    
   }*/
+  BuscarCat(){
+    this.servicecat.getFiltrado(this.txtBuscador).subscribe(respuesta=>{
+      this.categorias = respuesta.data;
+      
+    });
+  }
+  LimpiarCat(){
+    this.txtBuscador=undefined;
+  }
+  
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Turno} from 'src/app/Modelo/Turno';
 import {ServiceturService} from '../../Service/servicetur.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-listar-tur',
@@ -11,7 +12,11 @@ import {ServiceturService} from '../../Service/servicetur.service';
 export class ListarTurComponent implements OnInit {
 
   turnos:Turno[]; 
-  constructor(private servicetur:ServiceturService, private router:Router) { }
+  txtBuscador : String;
+  txtFecha : Date;
+
+
+  constructor(private servicetur:ServiceturService, private router:Router, private formatFecha: DatePipe) { }
 
   ngOnInit() {
     this.servicetur.getTurnos().subscribe(data=>{
@@ -33,5 +38,28 @@ export class ListarTurComponent implements OnInit {
       this.turnos=this.turnos.filter(p=>p!==turno); 
     alert("Turno eliminado"); }); 
   } 
+
+ /** Buscar(){
+    this.servicetur.getFiltrado(this.txtBuscador).subscribe(respuesta=>{
+      this.turnos= respuesta.data;
+    
+    });
+  }
+
+  limpiarFiltros(){
+    this.txtBuscador = undefined;
+  }*/
+
+ /** BuscarFecha(){
+    //this.formatFecha.transform(this.txtFecha,'dd/MM/yyyy')
+    this.servicetur.getFiltradoPorFecha(this.txtFecha).subscribe(respuesta=>{
+      this.turnos= respuesta.data;
+    
+    });
+  }
+
+  limpiarFiltrosFecha(){
+    this.txtFecha = undefined;
+  }*/
 
 }

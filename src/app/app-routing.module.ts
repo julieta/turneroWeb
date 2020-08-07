@@ -16,7 +16,8 @@ const routes: Routes = [
  {path: 'add-cat', component:AddCatComponent},
  {path : 'listar-tur', component:ListarTurComponent},
  {path: 'addtur', component:AddturComponent},
- {path: 'editar-cat', component:EditarCatComponent}
+ {path: 'editar-cat', component:EditarCatComponent},
+ {path: 'editar-cat/:id', component: EditarCatComponent}
 
 ];
 

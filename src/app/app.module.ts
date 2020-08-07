@@ -16,6 +16,7 @@ import { AddturComponent } from './Turno/addtur/addtur.component';
 import { ServiceturService } from './Service/servicetur.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -40,7 +41,7 @@ import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component'
   
   ],
 
-  providers: [ServiceService,ServicecatService,ServiceturService],
+  providers: [ServiceService,ServicecatService,ServiceturService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,40 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <div>
-                <input type="search" class="form-control"  placeholder="Buscar por nombre de categoria" role="combobox">
-            </div>
+           
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <!--(click)="limpiarFiltrosFecha()"-->
+                                <input type="text" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtBuscador"> 
+                            </div>
+                            <div>
+                                <!--(click)="Buscar()"-->
+                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">buscar</button>
+                            </div>
+                            <div>
+                                <!--(click)="limpiarFiltros()"-->
+                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <!--(click)="limpiarFiltrosFecha()"-->
+                                <input type="date" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtFecha"> 
+                            </div>
+                            <div>
+                                <!--(click)="BuscarFecha()"-->
+                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">BuscadorFecha</button>
+                            </div>
+                            <div>
+                                <!--(click)="limpiarFiltrosFecha()"-->
+                                <button type="button"  class="btn btn-outline-info btn-lg btn-block">limpiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
             <br>
             <div class="card">
                 <div class="card-header">

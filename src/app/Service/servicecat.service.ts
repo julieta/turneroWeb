@@ -9,6 +9,9 @@ import { identifierModuleUrl } from '@angular/compiler';
 //}
 )
 export class ServicecatService {
+  
+  private categoria : Categoria[]=[];
+
   constructor(private http:HttpClient) { }
     Url='http://localhost:8080/categorias';
 
@@ -27,13 +30,22 @@ export class ServicecatService {
       return this.http.delete<Categoria>(this.Url+"/"+categoria.id); 
     } 
     
-  //  getCategoriaId(id : number){
-  //    return this.http.get<Categoria>(this.Url + "/" + id);  
-  //  }
+    getCategoria(id : number) : Observable<any> {
+      return this.http.get<Categoria>(this.Url +  "/" +id)
+    }
+  
+   /** getCategoriaId(id : number){
+      return this.http.get<Categoria>(this.Url + "/" + id);  
+      
+    }
 
-   // updateCategoria(categoria : Categoria){
-   //   return this.http.put<Categoria>(this.Url + "/" + categoria.id, categoria);
-  //  }
+    updateCategoria(categoria : Categoria){
+      return this.http.put<Categoria>(this.Url + "/" + categoria.id, categoria);
+    }*/
+    getFiltrado(txt:string): Observable<any>{
+      return this.http.get<Categoria[]>(this.Url + '?nombre=' + txt );
+    }
+   
   
 }
 

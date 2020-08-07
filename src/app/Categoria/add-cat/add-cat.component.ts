@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Categoria} from 'src/app/Modelo/Categoria';
 import {ServicecatService} from '../../Service/servicecat.service';
+import { NgModel } from '@angular/forms';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class AddCatComponent implements OnInit {
 
   GuardarCat(formulario){
     this.servicecat.guardarCategoria(formulario.value).subscribe(respuesta =>{console.log(respuesta)});
+    
   }
 
   
