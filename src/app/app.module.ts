@@ -17,6 +17,8 @@ import { ServiceturService } from './Service/servicetur.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component';
 import { DatePipe } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import { EditarTurComponent } from './Turno/editar-tur/editar-tur.component';
 
 
 
@@ -31,7 +33,9 @@ import { DatePipe } from '@angular/common';
     ListarTurComponent,
     AddturComponent,
     NavbarComponent,
-    EditarCatComponent
+    EditarCatComponent,
+    LoginComponent,
+    EditarTurComponent
   ],
   imports: [
     BrowserModule,

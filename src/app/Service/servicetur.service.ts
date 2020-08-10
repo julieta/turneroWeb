@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Turno} from '../Modelo/Turno';
 import { Observable } from 'rxjs';
-import { identifierModuleUrl } from '@angular/compiler';
-import { Categoria } from '../Modelo/Categoria';
 
 @Injectable(//{
   //providedIn: 'root'}
@@ -31,5 +29,14 @@ export class ServiceturService {
 
     getFiltradoPorFecha(txt : Date) : Observable<any>{
       return this.http.get<Turno[]>(this.Url+'?fecha='+txt);
+    }
+
+    getTurno(id : number) {
+    
+      return this.http.get<Turno>(this.Url +  "/" +id);
+    }
+
+    get() : Observable<any>{
+      return this.http.get<Turno[]>(this.Url);
     }
 }

@@ -18,11 +18,9 @@ export class EditarCatComponent implements OnInit {
   constructor(private servicecat:ServicecatService, private router:Router, private activate: ActivatedRoute
     ) {
     this.activate.params.subscribe((parametros)=>{
-      
-      this.servicecat.getCategoria(parametros['id']).subscribe(respuesta => {
-        console.log(respuesta);
-        this.categoria = respuesta.data;
-        console.log(respuesta.data);
+      this.servicecat.getCategoria(parametros['id']).subscribe(categoria => {
+        this.categoria = categoria;
+        
       })
     });
     

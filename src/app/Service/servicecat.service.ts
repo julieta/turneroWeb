@@ -30,8 +30,9 @@ export class ServicecatService {
       return this.http.delete<Categoria>(this.Url+"/"+categoria.id); 
     } 
     
-    getCategoria(id : number) : Observable<any> {
-      return this.http.get<Categoria>(this.Url +  "/" +id)
+    getCategoria(id : number) {
+    
+      return this.http.get<Categoria>(this.Url +  "/" +id);
     }
   
    /** getCategoriaId(id : number){

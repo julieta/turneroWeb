@@ -62,4 +62,9 @@ export class ListarTurComponent implements OnInit {
     this.txtFecha = undefined;
   }
 
+  VerTurno(id : number){
+    this.router.navigate(['/editar-tur', id]);
+    
+  }
+
 }

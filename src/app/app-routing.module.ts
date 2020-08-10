@@ -7,6 +7,8 @@ import { AddCatComponent } from './Categoria/add-cat/add-cat.component';
 import { ListarTurComponent } from './Turno/listar-tur/listar-tur.component';
 import { AddturComponent } from './Turno/addtur/addtur.component';
 import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component';
+import { LoginComponent } from './login/login.component';
+import { EditarTurComponent } from './Turno/editar-tur/editar-tur.component';
 
 
 const routes: Routes = [
@@ -17,8 +19,11 @@ const routes: Routes = [
  {path : 'listar-tur', component:ListarTurComponent},
  {path: 'addtur', component:AddturComponent},
  {path: 'editar-cat', component:EditarCatComponent},
- {path: 'editar-cat/:id', component: EditarCatComponent}
-
+ {path: 'editar-cat/:id', component: EditarCatComponent},
+ {path: 'editar-tur', component:EditarTurComponent},
+ {path: 'editar-tur/:id', component: EditarTurComponent},
+ {path: 'login', component: LoginComponent},
+ {path : '**',  pathMatch: 'full', redirectTo : 'login'} //este siempre va al ultimo
 ];
 
 @NgModule({

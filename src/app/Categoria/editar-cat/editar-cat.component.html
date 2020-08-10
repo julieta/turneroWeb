@@ -1,7 +1,44 @@
-<h1>hola</h1>
-
-Nombre: 
-
-{{categoria | json }}
-
-{{categoria.id}}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+        <form>
+            <fieldset>
+              <legend>Editar Categoría</legend>
+              <hr>
+              <br>
+              <br>
+              <div>
+                <form autocomplete="off" >
+                  <div class="form-group">
+                    <label class="form-label">Nombre</label>
+                    <input class="form-control" 
+                            ngModel 
+                            name="nombre" 
+                            type="text" 
+                            placeholder={{categoria.nombre}} 
+                            required >
+                  </div>
+                  <div class="form-group">
+                      <label class="form-label">Descripción</label>
+                      <textarea class="form-control" 
+                                rows="3" 
+                                ngModel 
+                                name="descripcion" 
+                                type="text" 
+                                placeholder={{categoria.descripcion}} 
+                                required
+                                >        
+                      </textarea>
+                  </div>
+                  <br>
+                  <div>
+                    <button type="submit"class="btn btn-outline-info btn-lg btn-block" >Guardar para actualizar</button>
+                  </div>
+                </form>                
+              </div>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+  </div>
+  
