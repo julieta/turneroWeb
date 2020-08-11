@@ -18,20 +18,20 @@
                       <div class="col-sm-6">
                         <label class="form-label ">Nombre</label>
                         <input class="form-control" 
-                                ngModel 
+                                [(ngModel)]="turno.nombrecliente"
                                 name="nombrecliente" 
                                 type="text" 
-                                placeholder={{turno.nombre}}
+                                
                                 required >
                       </div>
                     
                       <div class="form-group col-sm-6">
                         <label class="form-label">Apellido</label>
                         <input class="form-control" 
-                                ngModel 
+                                [(ngModel)]="turno.apellidocliente"
                                 name="apellidocliente" 
                                 type="text" 
-                                placeholder={{turno.apellido}} 
+                                
                                 required>
                       </div>
                       <div class="form-group col-sm-4">
@@ -39,21 +39,22 @@
                         <input 
                           type="date" 
                           class="form-control" 
-                          ngModel 
+                          [(ngModel)]="turno.fecha"
                           name="fecha" 
-                          placeholder={{turno.fecha}} 
+                          
                           required >
                       </div>
                       <div class="form-group col-sm-2">
                         <label class="form-label">Hora</label>
                         <input class="form-control" 
-                          ngModel name = "hora" 
+                        [(ngModel)]="turno.hora" 
+                          name = "hora" 
                           type="time">                      
                       </div>
                       <div class="form-group col-sm-6">
                         <label class="form-label">Categoria</label>
-                        <select class="form-control" ngModel name = "categoria">
-                          <!--option *ngFor= "let c of categorias" [ngValue]="c">{{c.nombre}}</option-->
+                        <select class="form-control" [(ngModel)]="turno.categoria"  name = "categoria" placeholder="categoria.nombre">
+                          <option *ngFor= "let c of categorias" [ngValue]="c">{{c.nombre}}</option>
                         </select>
                       </div>
                     </div>
@@ -63,16 +64,16 @@
                       <label class="form-label">Descripción</label>
                       <textarea class="form-control" 
                                 rows="3" 
-                                ngModel 
+                                [(ngModel)]="turno.descripcion"
                                 name="descripcion" 
                                 type="text" 
-                                placeholder={{turno.descripcion}}
+                                
                                 required>
                       </textarea>
                     </div>
                     <br>
                     <div>
-                      <button type="submit" class="btn btn-outline-info btn-lg btn-block">Guardar turno</button>
+                      <button (click)="ActualizarTur(turno)" type="submit" class="btn btn-outline-info btn-lg btn-block">Guardar turno</button>
                     </div>
                   </form>
                 

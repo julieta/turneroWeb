@@ -10,7 +10,7 @@ import { ListarComponent } from 'src/app/Persona/listar/listar.component';
   styleUrls: ['./editar-cat.component.css']
 })
 export class EditarCatComponent implements OnInit {
-  //categoria : Categoria = new Categoria();
+  categoriaN : Categoria = new Categoria();
   //categoria : Categoria[];
  categoria : any = {} ;
  
@@ -38,14 +38,15 @@ export class EditarCatComponent implements OnInit {
       this.categoria = data;
       console.log("data", data);
     });
-  }
+  }*/
 
-  ActualizarCat(categoria : Categoria){
-    this.servicecat.updateCategoria(categoria).subscribe(data => {
-      this.categoria = data;
+  ActualizarCat(categoriaN : Categoria){
+    this.servicecat.updateCategoria(categoriaN).subscribe(categoriaN => {
+      this.categoriaN = categoriaN;
       alert("Se actualizo con exito");
       this.router.navigate(["listar-cat"]);
     });
-  }*/
+    
+  }
     
   }

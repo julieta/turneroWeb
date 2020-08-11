@@ -8,31 +8,30 @@
               <br>
               <br>
               <div>
-                <form autocomplete="off" >
+                <form action="">
                   <div class="form-group">
-                    <label class="form-label">Nombre</label>
+                    <label for="">Nombre</label>
                     <input class="form-control" 
-                            ngModel 
+                            [(ngModel)] ="categoria.nombre"
                             name="nombre" 
                             type="text" 
-                            placeholder={{categoria.nombre}} 
-                            required >
+                             >
                   </div>
                   <div class="form-group">
-                      <label class="form-label">Descripción</label>
-                      <textarea class="form-control" 
+                      <label for="">Descripción</label>
+                      <textarea class="form-control " 
                                 rows="3" 
-                                ngModel 
+                                [(ngModel)]="categoria.descripcion"
                                 name="descripcion" 
                                 type="text" 
-                                placeholder={{categoria.descripcion}} 
-                                required
+                                required                                
                                 >        
                       </textarea>
                   </div>
                   <br>
                   <div>
-                    <button type="submit"class="btn btn-outline-info btn-lg btn-block" >Guardar para actualizar</button>
+                    <!--(click)="ActualizarCat(categoria)"-->
+                    <button  (click)="ActualizarCat(categoria)" class="btn btn-outline-info btn-lg btn-block" >Guardar para actualizar</button>
                   </div>
                 </form>                
               </div>

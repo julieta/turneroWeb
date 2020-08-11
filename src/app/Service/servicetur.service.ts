@@ -39,4 +39,8 @@ export class ServiceturService {
     get() : Observable<any>{
       return this.http.get<Turno[]>(this.Url);
     }
+
+    updateTurno(turno : Turno){
+      return this.http.put<Turno>(this.Url + "/" + turno.id, turno);
+    }
 }

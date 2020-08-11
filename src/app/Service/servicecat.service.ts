@@ -35,14 +35,11 @@ export class ServicecatService {
       return this.http.get<Categoria>(this.Url +  "/" +id);
     }
   
-   /** getCategoriaId(id : number){
-      return this.http.get<Categoria>(this.Url + "/" + id);  
-      
-    }
 
     updateCategoria(categoria : Categoria){
       return this.http.put<Categoria>(this.Url + "/" + categoria.id, categoria);
-    }*/
+    
+    }
     getFiltrado(txt:string): Observable<any>{
       return this.http.get<Categoria[]>(this.Url + '?nombre=' + txt );
     }
