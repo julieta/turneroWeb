@@ -23,7 +23,7 @@ const routes: Routes = [
  {path: 'editar-tur', component:EditarTurComponent},
  {path: 'editar-tur/:id', component: EditarTurComponent},
  {path: 'login', component: LoginComponent},
- {path : '**',  pathMatch: 'full', redirectTo : 'login'} //este siempre va al ultimo
+ {path : '**',  pathMatch: 'full', redirectTo : 'navbar'} //este siempre va al ultimo
 ];
 
 @NgModule({

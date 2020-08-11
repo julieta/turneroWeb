@@ -19,6 +19,7 @@ import { EditarCatComponent } from './Categoria/editar-cat/editar-cat.component'
 import { DatePipe } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { EditarTurComponent } from './Turno/editar-tur/editar-tur.component';
+import { FilterTurPipe } from './Pipe/filter-tur.pipe';
 
 
 
@@ -35,7 +36,8 @@ import { EditarTurComponent } from './Turno/editar-tur/editar-tur.component';
     NavbarComponent,
     EditarCatComponent,
     LoginComponent,
-    EditarTurComponent
+    EditarTurComponent,
+    FilterTurPipe
   ],
   imports: [
     BrowserModule,
