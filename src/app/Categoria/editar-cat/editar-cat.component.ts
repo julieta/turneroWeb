@@ -43,7 +43,7 @@ export class EditarCatComponent implements OnInit {
   ActualizarCat(categoriaN : Categoria){
     this.servicecat.updateCategoria(categoriaN).subscribe(categoriaN => {
       this.categoriaN = categoriaN;
-      alert("Se actualizo con exito");
+      alert("¡La categoría se actualizó con éxito!");
       this.router.navigate(["listar-cat"]);
     });
     

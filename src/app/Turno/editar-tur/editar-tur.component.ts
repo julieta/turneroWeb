@@ -34,7 +34,7 @@ export class EditarTurComponent implements OnInit {
   ActualizarTur(turnoN : Turno){
     this.servicetur.updateTurno(turnoN).subscribe(turnoN => {
       this.turnoN = turnoN;
-      alert("Se actualizo con exito");
+      alert("¡El turno se actualizó con éxito!");
       this.router.navigate(["listar-tur"]);
     });
     

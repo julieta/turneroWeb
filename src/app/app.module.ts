@@ -20,6 +20,7 @@ import { DatePipe } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { EditarTurComponent } from './Turno/editar-tur/editar-tur.component';
 import { FilterTurPipe } from './Pipe/filter-tur.pipe';
+import { FilterFechaPipe } from './Pipe/filter-fecha.pipe';
 
 
 
@@ -37,7 +38,8 @@ import { FilterTurPipe } from './Pipe/filter-tur.pipe';
     EditarCatComponent,
     LoginComponent,
     EditarTurComponent,
-    FilterTurPipe
+    FilterTurPipe,
+    FilterFechaPipe
   ],
   imports: [
     BrowserModule,

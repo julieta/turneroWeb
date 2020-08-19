@@ -10,7 +10,7 @@ import {ServicecatService} from '../../Service/servicecat.service';
 })
 export class ListarCatComponent implements OnInit {
 
-  categorias:Categoria[]; 
+  categorias:Categoria[] = []; 
   txtBuscador: '';
 
   constructor(private servicecat:ServicecatService, private router:Router) { }

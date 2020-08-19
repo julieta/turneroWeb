@@ -24,7 +24,7 @@
                         <input type="date" class="form-control"  placeholder="Buscar por nombre de categoria" [(ngModel)]="txtFecha"> 
                     </div>
                     <div class="btn-group mr-1" role="group">
-                        <button type="button" (click)="BuscarFecha()" class="btn btn-outline-info">Buscar</button>
+                        <!--button type="button" (click)="BuscarFecha()" class="btn btn-outline-info">Buscar</button-->
                     </div>
                     <div class="btn-group mr-1" role="group">
                         <button type="button" (click)="limpiarFiltrosFecha()" class="btn btn-outline-info ">Limpiar</button>
@@ -38,9 +38,9 @@
                     <h3>Turnos</h3>
                 </div>
                 <div class="card-body col-sm-12">
-                    <table class="table table-hover col-sm-12">
+                    <table class="table table-hover col-sm-12 text-center">
                         <thead>
-                            <tr class="text-center">
+                            <tr >
                                 <th>NUMERO</th>
                                 <th>NOMBRE</th>
                                 <th>APELLIDO </th>
@@ -51,19 +51,19 @@
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
-                        <tbody class="text-center">
-                            <tr *ngFor="let turno of turnos | filterTur:txtBuscador " > 
+                        <tbody >
+                            <tr *ngFor="let turno of turnos | filterTur:txtBuscador  | filterFecha:txtFecha"> 
                                 <td >{{turno.id}}</td> 
                                 <td>{{turno.nombrecliente}}</td> 
                                 <td>{{turno.apellidocliente}}</td> 
                                 <td>{{turno.categoria.nombre}}</td> 
-                                <td>{{turno.fecha}}</td> 
+                                <td>{{turno.fecha | date: "dd-MM-yyyy"}}</td> 
                                 <td>{{turno.hora}}</td> 
                                 <td>{{turno.descripcion}}</td> 
                                 <td> 
                                     <div class="text-center" role="group" >
                                         <div class="btn-group mr-2" role="group" >
-                                            <button type="button" (click)="VerTurno(turno.id)" class="btn btn-outline-primary">Ver</button>
+                                            <button type="button" (click)="VerTurno(turno.id)" class="btn btn-outline-info">Ver</button>
                                         </div>
                                         <!--div class="btn-group mr-2" role="group" >
                                             <button type="button" class="btn btn-outline-warning">Editar</button>
@@ -82,7 +82,7 @@
             </div>
             <br>
             <div>
-                <button type="button" (click)="NuevoTur()" class="btn btn-outline-info btn-lg btn-block">Nuevo Turno</button>
+                <button type="button" (click)="NuevoTur()" class="btn btn-outline-success btn-lg btn-block">Nuevo </button>
             </div>
         </div>
     </div>

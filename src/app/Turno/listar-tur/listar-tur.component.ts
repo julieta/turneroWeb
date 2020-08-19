@@ -11,7 +11,7 @@ import { DatePipe } from '@angular/common';
 })
 export class ListarTurComponent implements OnInit {
 
-  turnos:Turno[]; 
+  turnos:Turno[] = []; 
   txtBuscador : '';
   txtFecha : Date;
 

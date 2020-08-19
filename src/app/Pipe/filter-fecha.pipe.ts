@@ -1,24 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filterTur'
+  name: 'filterFecha'
 })
-
-
-export class FilterTurPipe implements PipeTransform {
+export class FilterFechaPipe implements PipeTransform {
 
   transform(value: any,arg: any): any { 
     const res = [];
     //  if (!arg) { return value }
     if (value){
       for (const turnos of value){ 
-        if (turnos.nombrecliente.indexOf(arg) > -1){
+        if (turnos.fecha.indexOf(arg) > -1){
           res.push(turnos); 
           }; 
       }; 
       return arg ? res : value
     } 
   }
-} 
-
-
+}
